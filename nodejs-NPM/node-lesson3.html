@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NPM使用介绍</title>
+</head>
+<body>
+    <p>NPM是nodeJS一起安装的包管理工具，能解决NodeJS代码部署问题：</p>
+    <ul>
+        <li>1.允许用户从NPM服务器下载别人编写的第三方包到本地使用；</li>
+        <li>2.允许用户从NPM服务器下载别人编写的第三方包到本地使用；</li>
+        <li>3.允许用户将自己编写的包或命令行程序上传到NPM服务器供别人使用；</li>
+    </ul>
+    <p>相关命令</p>
+    <ul>
+        <li>1.npm -v :测试是否安装，以及当前的版本号</li>
+        <li>2.sudo npm install npm -g:mac版本升级； npm install npm -g:window版本升级 </li>
+        <li>3.npm install <Module Name>: 使用npm命令安装模块；安装好之后，放在了工程目录下的node_modules目录中，因此只需要require('模块名')就可以了，无需指定安装路径；</li>
+        <li>4.npm install express：本地安装； npm install express -g ：全局安装；如果出现npm err! Error:connect ECONNERFUSED 127.0.0.1:8087,解决办法：npm config set proxy null</li>
+        <li>5.本地安装放在./node_modules下，如果没有node_modules目录，会在当前执行npm命令的目录下生成node_modules目录。可以通过require()来引用本地安装的包。</li>
+        <li>6.全局安装：将安装包放在/usr/local下或者你node的安装目录。可以直接在命令行中使用</li>
+        <li>7.npm ls -g:查看所有全局安装的模块</li>
+        <li>8.npm uninstall exress: 卸载express模块，通过npm ls查看是否产出成功</li>
+        <li>9.npm update express:更新模块</li>
+        <li>10.npm search express:搜索模块</li>
+    </ul>
+    <P>Ctrl + C:可中断当前命令</P>
+</body>
+</html>

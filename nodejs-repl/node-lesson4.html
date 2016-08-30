@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node.js REPL(交互式解释器)</title>
+</head>
+<body>
+    <p>node自带交互式解释器，可以执行以下任务：</p>
+    <ul>
+        <li>1.读取 2.执行 3.打印 4.循环（循环操作以上步骤直到用户两次按下Ctrl+c）</li>
+        <li>输入node，进入node交互模式</li>
+        <li>使用变量：可以将变量存储在变量中，并在你需要的时候使用它；变量声明需要使用var关键字，如果没有使用var关键字就直接打印出来;使用var关键字的变量可是使用console.log()来输出变量</li>
+        <li>多行输入：...三个点的符号是系统自动生成的，你回车换行后即可。Node会自动检测是都为连续的表达式。.break即可退出循环</li>
+        <li>下划线变量：
+            node
+            var x = 10;
+            var y = 20;
+            x+y
+            var sum = _; //如果上面有多个表达式，只会取最后一个表达式的值
+            console.log(sum); //30
+        </li>
+    </ul>
+    <p>REPL命令</p>
+    <ul>
+        <li>ctrl + c: 退出当前终端</li>
+        <li>ctrl + c按下两次：退出Node REPL</li>
+        <li>ctrl + d:退出node REPL</li>
+        <li>向上/向下键：查看输入的历史命令</li>
+        <li>tab键：列出当前命令</li>
+        <li>.helo:列出使用命令</li>
+        <li>.break:退出多行表达式</li>
+        <li>.clear:退出多行表达式</li>
+        <li>.save filename:保存当前的Node REPL会话指定到文件</li>
+        <li>.load filename:载入当前Node REPL会话的文件内容</li>
+    </ul>
+</body>
+</html>
