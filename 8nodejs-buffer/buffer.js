@@ -71,3 +71,12 @@ var buf = new Buffer('www.runoob.com', 'utf-8');
 //返回值：没有返回值
 
 
+
+//缓冲区裁剪
+
+//语法：buf.slice([start[, end]]);
+//参数：start:数字，可选，默认：0
+//     end: 数字，可选，默认：buffer.length
+//返回值：返回一个新的缓冲区，和旧的缓冲区指向同一个内存，但是从索引start到end的位置剪切
+
+
