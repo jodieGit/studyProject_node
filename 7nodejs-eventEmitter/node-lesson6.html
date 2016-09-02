@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node.js EventEmitter</title>
+</head>
+<body>
+    <p>Node.js所有的异步I/O操作在完成时都会发送一个事件队列</p>
+    <p>Node.js里面许多对象都会分发事件：一个net.Server对象会在每次有新连接时分发一个事件，一个fs.readStream对象会在文件打开的时候发出一个事件。所有这些产生事件
+    对象都是events.EventEmitter的实例。</p>
+    <p>方法：</p>
+    <ul>
+        <li>1.addListener(event, listener):为指定事件添加一个监听器数组的尾部</li>
+        <li>2.on(event, listener):为指定事件注册一个监听器，接受一个字符串event和一个回调函数</li>
+        <li>3.once(event, listener):为指定事件注册一个单次监听器，即监听器最多只会触发一次，触发后立刻解除该监听器</li>
+        <li>4.removeListener(event, listener):移除指定事件的某个监听器，监听器必须是该事件已经注册过的监听器</li>
+        <li>5.removeAllListeners([event]):移除所有事件的所有监听器，如果指定事件，则移除指定事件的所有监听器。</li>
+        <li>6.setMaxListeners(n):默认情况下，EventEmitters如果你监听的超过10个就会输出警告信息。setMaxListeners函数用于监听器的默认限制数量</li>
+        <li>7.listeners(event):返回指定事件的监听器数量</li>
+        <li>8.emit(event,[arg1],[arg2],[...]):按参数的顺序执行每个监听器，如果事件有注册监听返回true，否则返回false</li>
+    </ul>
+    <p>类方法：</p>
+    <ul>
+        <li>listenerCount(emitter, event):返回指定事件的监听器数量</li>
+    </ul>
+    <p>事件：</p>
+    <ul>
+        <li>newListener:
+            event：字符串，事件名称
+            listener:处理事件函数
+            该事件在添加新监听器时被触发
+        </li>
+        <li>removeListener
+            event:字符串，事件名称
+            listener:处理事件函数
+            从指定监听器数组中删除一个监听器，需要注意：此操作将会改变处于被删监听器之后的那些监听器的索引。
+        </li>
+    </ul>
+</body>
+</html>

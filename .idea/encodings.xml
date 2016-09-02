@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/1nodejs-tutorial/helloworld.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/2node-http-server/server.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/5nodejs-callback/input" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/5nodejs-callback/main.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/6nodejs-event-loop/main.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/6nodejs-event-loop/main1.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/7nodejs-eventEmitter/error.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/7nodejs-eventEmitter/event1.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/7nodejs-eventEmitter/event2.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/7nodejs-eventEmitter/main.js" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
