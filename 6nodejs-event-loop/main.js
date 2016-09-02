@@ -2,30 +2,30 @@
  *
  * Created by wzwang on 2016/9/1.
  */
-//    引入events模块
+//    寮曞叆events妯″潡
 var events = require('events');
 
-//创建eventEmitter对象
+//鍒涘缓eventEmitter瀵硅薄
 var eventEmitter = new events.EventEmitter();
 
-//创建事件处理程序
+//鍒涘缓浜嬩欢澶勭悊绋嬪簭
 var connectHandler = function connected() {
-    console.log("链接成功")
+    console.log("閾炬帴鎴愬姛")
 
-//    触发data_received事件
+//    瑙﹀彂data_received浜嬩欢
     eventEmitter.emit('data_received');
 }
 
-//绑定connection事件处理程序
+//缁戝畾connection浜嬩欢澶勭悊绋嬪簭
 eventEmitter.on("connection", connectHandler);
 
-//使用匿名函数绑定data_receiced事件
+//浣跨敤鍖垮悕鍑芥暟缁戝畾data_receiced浜嬩欢
 eventEmitter.on("data_received", function() {
-    console.log("数据接收成功");
+    console.log("鏁版嵁鎺ユ敹鎴愬姛");
 });
 
-//触发connection事件
+//瑙﹀彂connection浜嬩欢
 eventEmitter.emit("connection");
 
-console.log("程序执行结束");
+console.log("绋嬪簭鎵ц缁撴潫");
 

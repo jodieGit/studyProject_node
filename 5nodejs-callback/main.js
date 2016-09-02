@@ -2,17 +2,17 @@
  * Created by wzwang on 2016/8/30.
  */
 
-//part1:ÒÀ´ÎÒ»¸öÒ»¸öÖ´ĞĞ£¬Ë³ĞòÊä³ö
+//part1:ä¾æ¬¡ä¸€ä¸ªä¸€ä¸ªæ‰§è¡Œï¼Œé¡ºåºè¾“å‡º
 //var fs = require("fs");
 //var data = fs.readFileSync("input.txt");
 //console.log(data.toString());
-//console.log("³ÌĞòÖ´ĞĞ½áÊø~");
+//console.log("ç¨‹åºæ‰§è¡Œç»“æŸ~");
 
-//part1Ö´ĞĞ½á¹û£º
-//    ²ËÄñ½Ì³Ì¹ÙÍøµØÖ·£ºwww.runoob.com
-//    ³ÌĞòÖ´ĞĞ½áÊø£¡
+//part1æ‰§è¡Œç»“æœï¼š
+//    èœé¸Ÿæ•™ç¨‹å®˜ç½‘åœ°å€ï¼šwww.runoob.com
+//    ç¨‹åºæ‰§è¡Œç»“æŸï¼
 
-//part2:Òì²½²Ù×÷
+//part2:å¼‚æ­¥æ“ä½œ
 var fs = require("fs");
 fs.readFile("input.txt", function (err, data) {
     if (err) {
@@ -20,9 +20,9 @@ fs.readFile("input.txt", function (err, data) {
     }
     console.log("data:" + data.toString());
 });
-console.log("³ÌĞòÖ´ĞĞ½áÊø");
+console.log("ç¨‹åºæ‰§è¡Œç»“æŸ");
 
-//part2Ö´ĞĞ½á¹û£º
-//³ÌĞòÖ´ĞĞ½áÊø£¡
-//²ËÄñ½Ì³Ì¹ÙÍøµØÖ·£ºwww.runoob.com
-//Ö÷Òª¶¼ÒªÓÃutf-8´ò¿ª
+//part2æ‰§è¡Œç»“æœï¼š
+//ç¨‹åºæ‰§è¡Œç»“æŸï¼
+//èœé¸Ÿæ•™ç¨‹å®˜ç½‘åœ°å€ï¼šwww.runoob.com
+//ä¸»è¦éƒ½è¦ç”¨utf-8æ‰“å¼€

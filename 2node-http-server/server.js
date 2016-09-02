@@ -1,17 +1,17 @@
 /**
  * Created by wzwang on 2016/8/25.
  */
-var http = require('http');//ÇëÇó£¨require£©Node.js×Ô´øµÄhttpÄ£¿é£¬²¢ÇÒ°ÑËü¸³Öµ¸øhttp±äÁ¿
-//ÎÒÃÇµ÷ÓÃhttpÄ£¿éÌá¹©µÄº¯Êı£ºcreateServer.Õâ¸öº¯Êı»á·µ»ØÒ»¸ö¶ÔÏó£¬Õâ¸ö¶ÔÏóÓĞÒ»¸ö½Ğ×ölistenµÄ·½·¨£¬Õâ¸ö·½·¨ÓĞÒ»¸ö²ÎÊıÖµ£¬Ö¸¶¨Õâ¸öhttp·şÎñÆ÷¼àÌıµÄ¶Ë¿ÚºÅ
+var http = require('http');//è¯·æ±‚ï¼ˆrequireï¼‰Node.jsè‡ªå¸¦çš„httpæ¨¡å—ï¼Œå¹¶ä¸”æŠŠå®ƒèµ‹å€¼ç»™httpå˜é‡
+//æˆ‘ä»¬è°ƒç”¨httpæ¨¡å—æä¾›çš„å‡½æ•°ï¼šcreateServer.è¿™ä¸ªå‡½æ•°ä¼šè¿”å›ä¸€ä¸ªå¯¹è±¡ï¼Œè¿™ä¸ªå¯¹è±¡æœ‰ä¸€ä¸ªå«åšlistençš„æ–¹æ³•ï¼Œè¿™ä¸ªæ–¹æ³•æœ‰ä¸€ä¸ªå‚æ•°å€¼ï¼ŒæŒ‡å®šè¿™ä¸ªhttpæœåŠ¡å™¨ç›‘å¬çš„ç«¯å£å·
 http.createServer(function(request, response) {
-    //·¢ËÍHTTPÍ·²¿
-    //HTTP ×´Ì¬Öµ£º 200£ºok
-    //ÄÚÈİÀàĞÍ£ºtext/plain
+    //å‘é€HTTPå¤´éƒ¨
+    //HTTP çŠ¶æ€å€¼ï¼š 200ï¼šok
+    //å†…å®¹ç±»å‹ï¼štext/plain
     response.writeHead(200, {'Content-Type': 'text/plain'});
 
-    //·¢ËÍÏàÓ¦Êı¾İ"Hello World"
+    //å‘é€ç›¸åº”æ•°æ®"Hello World"
     response.end("Hello World!");
 }).listen(8888);
 
-//ÖÕ¶Ë´òÓ¡ÈçÏÂĞÅÏ¢£º
-console.log('Server running at http://10.32.247.164:8888'); //±¾µØipµØÖ·
+//ç»ˆç«¯æ‰“å°å¦‚ä¸‹ä¿¡æ¯ï¼š
+console.log('Server running at http://10.32.247.164:8888'); //æœ¬åœ°ipåœ°å€
