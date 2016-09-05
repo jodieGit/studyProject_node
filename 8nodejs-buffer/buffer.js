@@ -80,3 +80,8 @@ var buf = new Buffer('www.runoob.com', 'utf-8');
 //返回值：返回一个新的缓冲区，和旧的缓冲区指向同一个内存，但是从索引start到end的位置剪切
 
 
+//缓冲区长度
+//语法：Node缓冲区长度计算语法如下：buf.length
+//返回值：返回Buffer对象所占据的内存长度
+
+

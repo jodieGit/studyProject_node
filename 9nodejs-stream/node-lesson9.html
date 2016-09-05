@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node.js Stream（流）</title>
+</head>
+<body>
+    <p>Stream是一个抽象接口，Node中很多对象实现了这个接口。例如：对http服务器发起的请求的request对象
+    就是一个Stream,还有stdout(标准输出)</p>
+
+    <p>Node.js，stream有四种流类型</p>
+    <ul>
+        <li>Readable: 可读操作</li>
+        <li>Writable: 可写操作</li>
+        <li>Duplex: 可读可写操作</li>
+        <li>Transform: 操作被写入操作，然后读出结果</li>
+    </ul>
+
+    <p>所有的Stream对象就都是EventEmitter的实例，常用的事件有：</p>
+    <ul>
+        <li>data: 当有数据可读时触发</li>
+        <li>end: 没有更多的数据可读时触发</li>
+        <li>error: 在接收和写入过程中发生错误时触发</li>
+        <li>finish: 所有数据已被写入到底层系统时触发</li>
+    </ul>
+</body>
+</html>
