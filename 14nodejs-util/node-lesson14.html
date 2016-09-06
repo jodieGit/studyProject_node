@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node.js常用工具</title>
+</head>
+<body>
+    <p>util是一个Node.js核心模块，提供常用函数的集合，用于弥补核心javascript的功能过于精简的不足.</p>
+    <ul>
+        <li>1.util.inherits: util.inherits(constuctor, superConstructor)是一个实现对象间原型继承的函数</li>
+        <li>2.util.inspect: util.inspect(object, [showHidden], [depth], [colors]是一个将任意对象转换为字符串的方法，
+            通常用于调试和错误输出，它至少接受一个参数object,即要转换的对象。
+            showHidden是一个可选参数，如果值为true,将会输出更多影藏信息；
+            depth表示最大递归的层数，如果对象很复杂，你可以指定层数以控制输出信息的多少。
+            如果不指定depth,默认会递归2层，如果不指定depth,默认会递归2层，指定为null表示不限制递归层数完整遍历对象;
+            如果color值为true,输出格式将会以ANSI颜色编码，通常用于在终端显示更漂亮的效果。特别要指出的是，util.inspect并不
+            会简单的直接把对象转换为字符串，即使该对象转换为字符串，即使该对象定义了一个toString方法也不会调用)
+        </li>
+        <li>3.util.isArray(object): 如果给定的参数"object"是一个数组返回true,否则返回false</li>
+        <li>4.util.isRegExp(object): 如果给定的参数"object"是一个正则表达式返回true，否则返回false</li>
+        <li>5.util.isDate(object): 如果给定的参数"object"是一个日期返回true,否则返回false</li>
+        <li>6.util.isError(object): 如果给定的参数"object"是一个错误对象返回true,否则返回false</li>
+    </ul>
+    <p>更多详情可以访问 <a href="//nodejs.org/api/util.html">http://nodejs.org/api/util.html</a> 了解详细内容。 </p>
+</body>
+</html>

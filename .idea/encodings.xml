@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/10node.js-module-system/example1.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/10node.js-module-system/example2.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/10node.js-module-system/hello.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/11nodejs-function/example1.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/11nodejs-function/example2.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/12nodejs-router/index.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/12nodejs-router/router.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/12nodejs-router/server.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/13nodejs-global-object/example1.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/13nodejs-global-object/example2.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/13nodejs-global-object/example3.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/13nodejs-global-object/example4.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/13nodejs-global-object/example5.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/14nodejs-util/example1.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/14nodejs-util/example2.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/14nodejs-util/example3.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/14nodejs-util/example4.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/14nodejs-util/example5.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/14nodejs-util/example6.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/1nodejs-tutorial/helloworld.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/2node-http-server/server.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/5nodejs-callback/input" charset="UTF-8" />

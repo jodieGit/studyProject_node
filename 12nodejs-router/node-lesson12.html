@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node.js 路由</title>
+    <link rel="stylesheet" href="http://www.runoob.com/wp-content/themes/runoob/style.css?v=1.02" type="text/css" media="all">
+</head>
+<body>
+<pre class="prettyprint prettyprinted"><span class="pln">                   url</span><span class="pun">.</span><span
+        class="pln">parse</span><span class="pun">(</span><span class="kwd">string</span><span
+        class="pun">).</span><span class="pln">query
+                                           </span><span class="pun">|</span><span class="pln">
+           url</span><span class="pun">.</span><span class="pln">parse</span><span class="pun">(</span><span
+        class="kwd">string</span><span class="pun">).</span><span class="pln">pathname      </span><span
+        class="pun">|</span><span class="pln">
+                       </span><span class="pun">|</span><span class="pln">                   </span><span
+        class="pun">|</span><span class="pln">
+                       </span><span class="pun">|</span><span class="pln">                   </span><span
+        class="pun">|</span><span class="pln">
+                     </span><span class="pun">------</span><span class="pln"> </span><span class="pun">-------------------</span><span
+        class="pln">
+http</span><span class="pun">:</span><span class="com">//localhost:8888/start?foo=bar&amp;hello=world</span><span
+        class="pln">
+                                </span><span class="pun">---</span><span class="pln">       </span><span class="pun">-----</span><span
+        class="pln">
+                                 </span><span class="pun">|</span><span class="pln">          </span><span
+        class="pun">|</span><span class="pln">
+                                 </span><span class="pun">|</span><span class="pln">          </span><span
+        class="pun">|</span><span class="pln">
+              querystring</span><span class="pun">(</span><span class="kwd">string</span><span
+        class="pun">)[</span><span class="str">"foo"</span><span class="pun">]</span><span class="pln">    </span><span
+        class="pun">|</span><span class="pln">
+                                            </span><span class="pun">|</span><span class="pln">
+                         querystring</span><span class="pun">(</span><span class="kwd">string</span><span
+        class="pun">)[</span><span class="str">"hello"</span><span class="pun">]</span></pre>
+</body>
+</html>
