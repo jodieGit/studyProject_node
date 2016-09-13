@@ -123,11 +123,15 @@
     </tbody>
 </table>
 <br/>
-<p>3.异步模式下写入文件语法:fs.writeFile(filename, data [, options], callback)  如果该文件存在，该方法写入的内容会覆盖旧的文件内容。</p>
+
+<p>3.异步模式下写入文件语法:fs.writeFile(filename, data [, options], callback) 如果该文件存在，该方法写入的内容会覆盖旧的文件内容。</p>
+
 <p>参数使用说明：path: 文件路径； data: 要写入文件的数据，可以是String(字符串)或Buffer(流)对象； options: 该参数是一个对象{encoding, mode, flag}。默认编码是
-utf8,模式为0666，flag为'w'; 回调函数只包含错误信息参数，在写入失败时返回</p>
+    utf8,模式为0666，flag为'w'; 回调函数只包含错误信息参数，在写入失败时返回</p>
 <br/>
+
 <p>4.异步模式下读取文件的语法模式：fs.read(fd, buffer, offset, length, position, callback)</p>
+
 <p>参数说明：</p>
 <ul>
     <li>fd: 通过fs.open()方法返回的文件描述符。</li>
@@ -138,7 +142,333 @@ utf8,模式为0666，flag为'w'; 回调函数只包含错误信息参数，在�
     <li>callback: 回调函数，有三个参数err, bytesRead, buffer, err为错误信息，bytesRead表示读取的字节数，buffer为缓冲区对象</li>
 </ul>
 <br/>
+
 <p>5.异步模式下关闭文件：fs.close(fd, callback)</p>
-<p>参数说明：fd  通过fs.open()方法返回的文件描述符   callback 回调函数，没有参数</p>
+
+<p>参数说明：fd 通过fs.open()方法返回的文件描述符 callback 回调函数，没有参数</p>
+<br/>
+
+<p>6.关闭文件：fs.close(fd, callback)</p>
+
+<p>参数说明：fd: 通过fs.open()方法返回文件的描述符；callback: 回调函数，没有参数</p>
+<br/>
+
+<p>7.截取方法：fs.ftruncate(fd, len, callback)</p>
+
+<p>参数说明：fd:通过fs.open()方法返回的文件描述符； len: 文件内容截取的长度；callback：回调函数，没有参数</p>
+<br/>
+
+<p>8.删除文件：fs.unlink(path, callback)</p>
+
+<p>参数说明：path: 文件路径 callback:回调函数，没有参数</p>
+
+<p>9.创建目录：fs.mkdir(path[, mode], callback)</p>
+
+<p>参数说明：path: 文件路径 mode: 设置目录权限，默认为0777； callback:回调函数，没有参数</p>
+<br/>
+
+<p>10.读取目录： fs.readdir(path, callback)</p>
+
+<p>参数说明： path:文件路径 callback: 回调函数带有两个参数err, files, err为错误信息，files为目录下的文件数组列表</p>
+
+<p>11.删除目录：fs.rmdir(path, callback)</p>
+
+<p>参数说明：path: 文件路径 callback: 回调函数，没有参数</p>
+<br/>
+
+<p>文件模块方法参考手册：</p>
+<table class="reference">
+    <tbody>
+    <tr>
+        <th>序号</th>
+        <th>方法 &amp; 描述</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td><b>fs.rename(oldPath, newPath, callback)</b><br>异步 rename().回调函数没有参数，但可能抛出异常。</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td><b>fs.ftruncate(fd, len, callback)</b><br>异步 ftruncate().回调函数没有参数，但可能抛出异常。</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td><b>fs.ftruncateSync(fd, len)</b><br>同步 ftruncate()</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td><b>fs.truncate(path, len, callback)</b><br>异步 truncate().回调函数没有参数，但可能抛出异常。</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td><b>fs.truncateSync(path, len)</b><br>同步 truncate()</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td><b>fs.chown(path, uid, gid, callback)</b><br>异步 chown().回调函数没有参数，但可能抛出异常。</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td><b>fs.chownSync(path, uid, gid)</b><br>同步 chown()</td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td><b>fs.fchown(fd, uid, gid, callback)</b><br>异步 fchown().回调函数没有参数，但可能抛出异常。</td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td><b>fs.fchownSync(fd, uid, gid)</b><br>同步 fchown()</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td><b>fs.lchown(path, uid, gid, callback)</b><br>异步 lchown().回调函数没有参数，但可能抛出异常。</td>
+    </tr>
+    <tr>
+        <td>11</td>
+        <td><b>fs.lchownSync(path, uid, gid)</b><br>同步 lchown()</td>
+    </tr>
+    <tr>
+        <td>12</td>
+        <td><b>fs.chmod(path, mode, callback)</b><br>异步 chmod().回调函数没有参数，但可能抛出异常。</td>
+    </tr>
+    <tr>
+        <td>13</td>
+        <td><b>fs.chmodSync(path, mode)</b><br>同步 chmod().</td>
+    </tr>
+    <tr>
+        <td>14</td>
+        <td><b>fs.fchmod(fd, mode, callback)</b><br>异步 fchmod().回调函数没有参数，但可能抛出异常。</td>
+    </tr>
+    <tr>
+        <td>15</td>
+        <td><b>fs.fchmodSync(fd, mode)</b><br>同步 fchmod().</td>
+    </tr>
+    <tr>
+        <td>16</td>
+        <td><b>fs.lchmod(path, mode, callback)</b><br>异步 lchmod().回调函数没有参数，但可能抛出异常。Only available on Mac OS X.</td>
+    </tr>
+    <tr>
+        <td>17</td>
+        <td><b>fs.lchmodSync(path, mode)</b><br>同步 lchmod().</td>
+    </tr>
+    <tr>
+        <td>18</td>
+        <td><b>fs.stat(path, callback)</b><br>异步 stat(). 回调函数有两个参数 err, stats，stats 是 fs.Stats 对象。</td>
+    </tr>
+    <tr>
+        <td>19</td>
+        <td><b>fs.lstat(path, callback)</b><br>异步 lstat(). 回调函数有两个参数 err, stats，stats 是 fs.Stats 对象。</td>
+    </tr>
+    <tr>
+        <td>20</td>
+        <td><b>fs.fstat(fd, callback)</b><br>异步 fstat(). 回调函数有两个参数 err, stats，stats 是 fs.Stats 对象。</td>
+    </tr>
+    <tr>
+        <td>21</td>
+        <td><b>fs.statSync(path)</b><br>同步 stat(). 返回 fs.Stats 的实例。</td>
+    </tr>
+    <tr>
+        <td>22</td>
+        <td><b>fs.lstatSync(path)</b><br>同步 lstat(). 返回 fs.Stats 的实例。</td>
+    </tr>
+    <tr>
+        <td>23</td>
+        <td><b>fs.fstatSync(fd)</b><br>同步 fstat(). 返回 fs.Stats 的实例。</td>
+    </tr>
+    <tr>
+        <td>24</td>
+        <td><b>fs.link(srcpath, dstpath, callback)</b><br>异步 link().回调函数没有参数，但可能抛出异常。</td>
+    </tr>
+    <tr>
+        <td>25</td>
+        <td><b>fs.linkSync(srcpath, dstpath)</b><br>同步 link().</td>
+    </tr>
+    <tr>
+        <td>26</td>
+        <td><b>fs.symlink(srcpath, dstpath[, type], callback)</b><br>异步 symlink().回调函数没有参数，但可能抛出异常。 type 参数可以设置为 'dir',
+            'file', 或 'junction' (默认为 'file') 。
+        </td>
+    </tr>
+    <tr>
+        <td>27</td>
+        <td><b>fs.symlinkSync(srcpath, dstpath[, type])</b><br>同步 symlink().</td>
+    </tr>
+    <tr>
+        <td>28</td>
+        <td><b>fs.readlink(path, callback)</b><br>异步 readlink(). 回调函数有两个参数 err, linkString。</td>
+    </tr>
+    <tr>
+        <td>29</td>
+        <td><b>fs.realpath(path[, cache], callback)</b><br>异步 realpath(). 回调函数有两个参数 err, resolvedPath。</td>
+    </tr>
+    <tr>
+        <td>30</td>
+        <td><b>fs.realpathSync(path[, cache])</b><br>同步 realpath()。返回绝对路径。</td>
+    </tr>
+    <tr>
+        <td>31</td>
+        <td><b>fs.unlink(path, callback)</b><br>异步 unlink().回调函数没有参数，但可能抛出异常。</td>
+    </tr>
+    <tr>
+        <td>32</td>
+        <td><b>fs.unlinkSync(path)</b><br>同步 unlink().</td>
+    </tr>
+    <tr>
+        <td>33</td>
+        <td><b>fs.rmdir(path, callback)</b><br>异步 rmdir().回调函数没有参数，但可能抛出异常。</td>
+    </tr>
+    <tr>
+        <td>34</td>
+        <td><b>fs.rmdirSync(path)</b><br>同步 rmdir().</td>
+    </tr>
+    <tr>
+        <td>35</td>
+        <td><b>fs.mkdir(path[, mode], callback)</b><br>S异步 mkdir(2).回调函数没有参数，但可能抛出异常。 mode defaults to 0777.</td>
+    </tr>
+    <tr>
+        <td>36</td>
+        <td><b>fs.mkdirSync(path[, mode])</b><br>同步 mkdir().</td>
+    </tr>
+    <tr>
+        <td>37</td>
+        <td><b>fs.readdir(path, callback)</b><br>异步 readdir(3). 读取目录的内容。</td>
+    </tr>
+    <tr>
+        <td>38</td>
+        <td><b>fs.readdirSync(path)</b><br>同步 readdir().返回文件数组列表。</td>
+    </tr>
+    <tr>
+        <td>39</td>
+        <td><b>fs.close(fd, callback)</b><br>异步 close().回调函数没有参数，但可能抛出异常。</td>
+    </tr>
+    <tr>
+        <td>40</td>
+        <td><b>fs.closeSync(fd)</b><br>同步 close().</td>
+    </tr>
+    <tr>
+        <td>41</td>
+        <td><b>fs.open(path, flags[, mode], callback)</b><br>异步打开文件。</td>
+    </tr>
+    <tr>
+        <td>42</td>
+        <td><b>fs.openSync(path, flags[, mode])</b><br>同步 version of fs.open().</td>
+    </tr>
+    <tr>
+        <td>43</td>
+        <td><b>fs.utimes(path, atime, mtime, callback)</b><br>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>44</td>
+        <td><b>fs.utimesSync(path, atime, mtime)</b><br>修改文件时间戳，文件通过指定的文件路径。</td>
+    </tr>
+    <tr>
+        <td>45</td>
+        <td><b>fs.futimes(fd, atime, mtime, callback)</b><br>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>46</td>
+        <td><b>fs.futimesSync(fd, atime, mtime)</b><br>修改文件时间戳，通过文件描述符指定。</td>
+    </tr>
+    <tr>
+        <td>47</td>
+        <td><b>fs.fsync(fd, callback)</b><br>异步 fsync.回调函数没有参数，但可能抛出异常。</td>
+    </tr>
+    <tr>
+        <td>48</td>
+        <td><b>fs.fsyncSync(fd)</b><br>同步 fsync.</td>
+    </tr>
+    <tr>
+        <td>49</td>
+        <td><b>fs.write(fd, buffer, offset, length[, position], callback)</b><br>将缓冲区内容写入到通过文件描述符指定的文件。</td>
+    </tr>
+    <tr>
+        <td>50</td>
+        <td><b>fs.write(fd, data[, position[, encoding]], callback)</b><br>通过文件描述符 fd 写入文件内容。</td>
+    </tr>
+    <tr>
+        <td>51</td>
+        <td><b>fs.writeSync(fd, buffer, offset, length[, position])</b><br>同步版的 fs.write()。</td>
+    </tr>
+    <tr>
+        <td>52</td>
+        <td><b>fs.writeSync(fd, data[, position[, encoding]])</b><br>同步版的 fs.write().</td>
+    </tr>
+    <tr>
+        <td>53</td>
+        <td><b>fs.read(fd, buffer, offset, length, position, callback)</b><br>通过文件描述符 fd 读取文件内容。</td>
+    </tr>
+    <tr>
+        <td>54</td>
+        <td><b>fs.readSync(fd, buffer, offset, length, position)</b><br>同步版的 fs.read.</td>
+    </tr>
+    <tr>
+        <td>55</td>
+        <td><b>fs.readFile(filename[, options], callback)</b><br>异步读取文件内容。</td>
+    </tr>
+    <tr>
+        <td>56</td>
+        <td><b>fs.readFileSync(filename[, options])</b>
+            <br同步版的 fs.readfile.
+            <="" td=""></br同步版的></td>
+    </tr>
+    <tr>
+        <td>57</td>
+        <td><b>fs.writeFile(filename, data[, options], callback)</b><br>异步写入文件内容。</td>
+    </tr>
+    <tr>
+        <td>58</td>
+        <td><b>fs.writeFileSync(filename, data[, options])</b><br>同步版的 fs.writeFile。</td>
+    </tr>
+    <tr>
+        <td>59</td>
+        <td><b>fs.appendFile(filename, data[, options], callback)</b><br>异步追加文件内容。</td>
+    </tr>
+    <tr>
+        <td>60</td>
+        <td><b>fs.appendFileSync(filename, data[, options])</b><br>The 同步 version of fs.appendFile.</td>
+    </tr>
+    <tr>
+        <td>61</td>
+        <td><b>fs.watchFile(filename[, options], listener)</b><br>查看文件的修改。</td>
+    </tr>
+    <tr>
+        <td>62</td>
+        <td><b>fs.unwatchFile(filename[, listener])</b><br>停止查看 filename 的修改。</td>
+    </tr>
+    <tr>
+        <td>63</td>
+        <td><b>fs.watch(filename[, options][, listener])</b><br>查看 filename 的修改，filename 可以是文件或目录。返回 fs.FSWatcher 对象。
+        </td>
+    </tr>
+    <tr>
+        <td>64</td>
+        <td><b>fs.exists(path, callback)</b><br>检测给定的路径是否存在。</td>
+    </tr>
+    <tr>
+        <td>65</td>
+        <td><b>fs.existsSync(path)</b><br>同步版的 fs.exists.</td>
+    </tr>
+    <tr>
+        <td>66</td>
+        <td><b>fs.access(path[, mode], callback)</b><br>测试指定路径用户权限。</td>
+    </tr>
+    <tr>
+        <td>67</td>
+        <td><b>fs.accessSync(path[, mode])</b><br>同步版的 fs.access。</td>
+    </tr>
+    <tr>
+        <td>68</td>
+        <td><b>fs.createReadStream(path[, options])</b><br>返回ReadStream 对象。</td>
+    </tr>
+    <tr>
+        <td>69</td>
+        <td><b>fs.createWriteStream(path[, options])</b><br>返回 WriteStream 对象。</td>
+    </tr>
+    <tr>
+        <td>70</td>
+        <td><b>fs.symlink(srcpath, dstpath[, type], callback)</b><br>异步 symlink().回调函数没有参数，但可能抛出异常。</td>
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>

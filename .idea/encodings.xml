@@ -21,11 +21,20 @@
     <file url="file://$PROJECT_DIR$/14nodejs-util/example5.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/14nodejs-util/example6.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/15nodejs-fs/example1.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/15nodejs-fs/example10.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/15nodejs-fs/example11.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/15nodejs-fs/example2.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/15nodejs-fs/example3.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/15nodejs-fs/example4.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/15nodejs-fs/example5.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/15nodejs-fs/example6.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/15nodejs-fs/example7.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/15nodejs-fs/example8.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/15nodejs-fs/example9.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/16nodejs-js-get-post/example1.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/16nodejs-js-get-post/example2.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/18nodejs-web-module/client.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/18nodejs-web-module/server.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/1nodejs-tutorial/helloworld.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/2node-http-server/server.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/5nodejs-callback/input" charset="UTF-8" />

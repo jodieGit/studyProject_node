@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node.js GET/POST请求</title>
+</head>
+<body>
+    <p>获取GET请求内容：因为get请求直接嵌套在路径中，URL是完整的请求路径，包括了？后面的部分，因为可以手动解析后面的内容作为GET请求的参数。</p>
+    <p>获取POST请求内容：Post请求的内容全部在请求体中，http.ServerRequest并没有一个属性内容为请求体，原因是等待请求体传输可能是一件耗时的工作。</p>
+</body>
+</html>
